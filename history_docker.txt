@@ -1,0 +1,259 @@
+    1  cowsay teste
+    2  cowsay -f tux
+    3  cowsay -f tux teste
+    4  cowsay -f dragon teste
+    5  echo PATH
+    6  echo $PATH
+    7  less /etc/profile
+    8  sl
+    9  cat /etc/group
+   10  ls -lhtr /tmp/
+   11  systemctl status nginx
+   12  systemctl stop nginx
+   13  systemctl status nginx
+   14  cat /var/www/html/index.php
+   15  systemctl status nginx
+   16  cat /var/www/html/index.php 
+   17  uname -a
+   18  uname -r
+   19  lsb_release -a
+   20  wget https://apt.puppet.com/puppet6-release-18.04.deb
+   21  wget https://apt.puppet.com/puppet6-release-bionic.deb
+   22  ls
+   23  rm -rf puppet6-release-bionic.deb 
+   24  dpkg -l| grep puppet
+   25  puppet --version
+   26  puppet resource service apache2 ensure=running
+   27  #puppet resource service apache2 ensure=running
+   28  puppet resource service nginx ensure=stopped enable=false
+   29  puppet resource service apache2 ensure=running
+   30  ls /etc/puppetlabs/
+   31  puppet agent -t --server devops.salas4linux.com.br
+   32  cat /etc/puppetlabs/puppet/puppet.conf 
+   33  puppet agent -t
+   34  tail -100f /var/log/syslog 
+   35  cat /etc/puppetlabs/puppet/puppet.conf 
+   36  tail -100f /var/log/syslog 
+   37  cat /etc/puppetlabs/puppet/puppet.conf 
+   38  tail -100f /var/log/syslog 
+   39  cat /etc/puppetlabs/puppet/puppet.conf 
+   40  tail -100f /var/log/syslog 
+   41  cat /etc/puppetlabs/puppet/puppet.conf 
+   42  tail -100f /var/log/syslog 
+   43  cat /etc/puppetlabs/puppet/puppet.conf 
+   44  tail -100f /var/log/syslog 
+   45  exit
+   46  tail -100f /var/log/syslog 
+   47  ss -ltnp
+   48  tail -100f /var/log/syslog 
+   49  which yum-config
+   50  which yum
+   51  lsb_release
+   52  lsb_release -a
+   53  lsb_release -cs
+   54  tail -f /var/log/syslog 
+   55  wich yum-config-manager
+   56  which yum-config-manager
+   57  yum search yum-config-manager
+   58  tail -f /var/log/syslog 
+   59  wich curl
+   60  which curl
+   61  which apt
+   62  tail -f /var/log/syslog 
+   63  dpkg -l| grep docker
+   64  tail -f /var/log/syslog 
+   65  less /etc/apt/sources.list
+   66  tail -f /var/log/syslog 
+   67  vi /etc/apt/sources.list
+   68  tail -f /var/log/syslog 
+   69  systemctl status docker
+   70  history
+   71  puppet agent -t --server devops.salas4linux.com.br
+   72  tail -f /var/log/syslog 
+   73  docker --version
+   74  puppet agent -t --server devops.salas4linux.com.br
+   75  ssh automation
+   76  systemctl status docker
+   77  docker --version
+   78  cat /etc/os-release 
+   79  docker info
+   80  docker run hello-world
+   81  docker info
+   82  docker ps
+   83  docker ps -a
+   84  docker run debian:10-slim
+   85  docker ps -a
+   86  docker run debian:10-slim ls /etc
+   87  docker ps -a
+   88  docker run -ti debian:10-slim
+   89  uname -r
+   90  ps aux| wc -l
+   91  ps aux|grep 1
+   92  "jovial",
+   93  "keen",
+   94  "kind",
+   95  htop
+   96  docker ps
+   97  docker ps -a
+   98  docker run --name mutano -h mutano -ti centos
+   99  docker ps
+  100  docker info -
+  101  docker ps -a
+  102  docker attach mutano
+  103  docker ps -a
+  104  docker attach mutano
+  105  docker run --name ravena -h ravena -d centos
+  106  docker ps -a
+  107  docker run --name ravena -h ravena -dti centos
+  108  docker run --name joker -h joker -dti centos
+  109  ps
+  110  docker ps
+  111  docker exec joker ls
+  112  docker exec joker ls /tmp
+  113  docker exec joker cat /tmp/yum.log
+  114  docker exec yum install elinks
+  115  docker exec joker yum install elinks
+  116  docker exec joker -ti bash
+  117  docker exec -ti joker bash
+  118  docker ps
+  119  docker ps -a
+  120  docker rm naughty_parwe
+  121  docker rm naughty_pare
+  122  docker ps -a
+  123  docker rm f0
+  124  docker ps -a
+  125  docker rm ba
+  126  docker rm 5f
+  127  docker ps -a
+  128  docker rm a0
+  129  docker rm 30
+  130  docker ps -a
+  131  docker rm b4
+  132  docker container prune
+  133  docker ps -a
+  134  docker images
+  135  df -h
+  136  docker search kali
+  137  docker search windows
+  138  docker pull alpine
+  139  docker images
+  140  docker -dti --name cyborg alpine
+  141  docker run -dti --name cyborg alpine
+  142  docker ps
+  143  docker exec -ti cyborg sh
+  144  docker ps
+  145  ip a
+  146  ip a show docker0
+  147  ip a
+  148  iptable -nL
+  149  iptables -nL
+  150  docker images
+  151  docker rmi fc
+  152  docker images
+  153  docker --help
+  154  docker stats
+  155  docker inspect joker
+  156  docker inspect -f '{{.NetworkSettings.Networks.IPAddress}}'
+  157  docker inspect -f '{{.NetworkSettings.Networks.IPAddress}}' joker
+  158  docker inspect -f '{{.NetworkSettings.Networks.bridge.IPAddress}}' joker
+  159  docker inspect -f '{{.NetworkSettings.IPAddress}}' joker
+  160  docker volume ls
+  161  docker volume create dcwomen
+  162  docker volume ls
+  163  cd /var/lib/docker/volumes/dcwomen/_data/
+  164  ls
+  165  touch {arlequina,zatanna,mulher_maravilha,mulher_gaviao}
+  166  ls
+  167  cd
+  168  docker run -dti --name dcwomen -h dcwomen -v dcwomen:/root/girl_power/ centos
+  169  docker exec -ti dcwomen bash
+  170  cat /var/lib/docker/volumes/dcwomen/_data/mulher_maravilha 
+  171  mkdir superman 
+  172  cd superman/
+  173  touch superman{1..10}
+  174  ls
+  175  vim superman1
+  176  cat superman1
+  177  cd
+  178  docker run -dti --name superman -v /root/superman/:/root/dcmen debian:10-slin
+  179  docker run -dti --name superman -v /root/superman/:/root/dcmen debian:10-slim
+  180  docker exec -ti superman bash
+  181  docker ps
+  182  top
+  183  docker run -d -p 8082:80 --name server_nginx -h server_nginx nginx:alpine
+  184  docker ps
+  185  ss -lntp
+  186  iptable -t nat -nL
+  187  iptables -t nat -nL
+  188  docker network ls
+  189  docker network create --subnet 10.0.0.0/16 dockerlan
+  190  docker network ls
+  191  ip a
+  192  docker run -dti --name web_client --dns=8.8.8.8 --ip 10.0.0.10 --net dockerlan debian:10-slim
+  193  docker ps
+  194  docker network connect dockerlan server_nginx
+  195  docker inspect server_nginx
+  196  docker exec -ti web_client bash
+  197  docker ps
+  198  docker commit web_client web_curl
+  199  docker images
+  200  docker run -ti --name curl -h curl web_curl
+  201  docker ps
+  202  docker container prune
+  203  docker ps
+  204  apt update;apt install docker-compose -y
+  205  mkdir compose
+  206  cd compose/
+  207  > docker-compose.yml
+  208  docker-compose version
+  209  vim docker-compose.yml
+  210  docker-compose --help
+  211  docker-compose up-d
+  212  docker-compose up -d
+  213  docker-compose ps
+  214  ipconfig
+  215  ip a
+  216  ls
+  217  ls -lhtr
+  218  cat docker-compose.yml 
+  219  docker-compose down
+  220  docker-compose ps a
+  221  docker-compose ps -a
+  222  docker-compose ps 
+  223  docker-compose up
+  224  docker-compose up -
+  225  docker-compose up -d
+  226  docker-compose ps
+  227  top
+  228  systemctl status docker
+  229  docker ps
+  230  docker-compose ps
+  231  cd compose/
+  232  docker-compose ps
+  233  docker-compose down
+  234  cd
+  235  mkdir dockerfile
+  236  cd dockerfile/
+  237  vim Dockerfile
+  238  docker build -t capuz_vermelho:1.0 -t capuz_vermelho:latest·
+  239  docker build -t capuz_vermelho:1.0 -t capuz_vermelho:latest .
+  240  ls
+  241  vim requirements.txt
+  242  docker build -t capuz_vermelho:1.0 -t capuz_vermelho:latest .
+  243  docker images
+  244  vi Dockerfile 
+  245  docker build -t capuz_vermelho:1.0 -t capuz_vermelho:latest .
+  246  docker ps -a
+  247  docker run -d -p 5000:5000 capu_vermelho:latest
+  248  docker run -d -p 5000:5000 capu_vermelho
+  249  docker run -d -p 5000:5000 capuz_vermelho:latest
+  250  docker ps -a
+  251  docker run -d --name portainer -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
+  252  docker images
+  253  docker system prune
+  254  docker ps
+  255  docker run -d --name gitlab -v gitlab_config:/etc/gitlab -v gitlab_data:/var/opt/gitlab -p 8080:80 -p 2227:22 --restart=always gitlab/gitlab-ce
+  256  git log
+  257  git logs
+  258  git log
+  259  history > docker.txt

@@ -1,0 +1,872 @@
+    1  apt update ; apt install software-properties-common python-pip -y
+    2  apt-add-repository --yes --update ppa:ansible/ansible
+    3  apt-get install ansible -y
+    4  ansible --version
+    5  ssh root@192.168.99.20
+    6  cd /etc/ansible/
+    7  ls -lart
+    8  less hosts 
+    9  less ansible.cfg 
+   10  vi ansible.cfg 
+   11  vi hosts 
+   12  cat hosts 
+   13  vi hosts 
+   14  ansible all -m ping
+   15  ansible automation -m command -a 'free -h'
+   16  ansible all -m command -a 'free -h'
+   17  ansible automation -m apt -a 'name=vim state=present'
+   18  ansible automation -m yum -a 'name=vim state=present'
+   19  ansible docker -m setup
+   20  mkdir playbooks
+   21  cd playbooks/
+   22  vim ivy.yml
+   23  cat ivy.yml 
+   24  ansible-playbook -e "maquinas=all" ivy.yml
+   25  vi ivy.yml 
+   26  ansible-playbook -e "maquinas=all" ivy.yml
+   27  vi ivy.yml 
+   28  ansible-playbook -e "maquinas=docker" ivy.yml
+   29  vi ivy.yml 
+   30  ansible-playbook -e "maquinas=all" ivy.yml
+   31  cowsay
+   32  cowsay teste
+   33  cd ..
+   34  vi ansible.cfg 
+   35  cd playbooks/
+   36  ansible-playbook -e "maquinas=all" ivy.yml
+   37  vi ivy.yml 
+   38  ansible-playbook -e "maquinas=all" ivy.yml
+   39  cowsay teste
+   40  echo $PATH
+   41  ls -lhtr /bin/sl*
+   42  ls -lhtr /usr/local/sbin/s*
+   43  ls -lhtr /usr/local/sbin/
+   44  echo $PATH
+   45  cd /usr/bin/
+   46  ls
+   47  vi /etc/profile
+   48  sl
+   49  man cowsay
+   50  sl -F
+   51  cd /etc/ansible/playbooks/
+   52  vi ivy.yml 
+   53  history|less
+   54  > /root/bane
+   55  history|less
+   56  ansible-playbook -e "maquinas=all" ivy.yml
+   57  vi ivy.yml 
+   58  cat /etc/user
+   59  cat /etc/group
+   60  ls -lhtr /tmp/
+   61  vi ivy.yml 
+   62  cat /etc/hosts
+   63  vi ivy.yml 
+   64  systemctl nginx status
+   65  systemctl status nginx.service x
+   66  systemctl status nginx.service
+   67  systemctl stop nginx.service
+   68  ansible-playbook -e "maquinas=all" ivy.yml
+   69  vi ivy.yml 
+   70  ansible-playbook -e "maquinas=all" ivy.yml
+   71  vi ivy.yml 
+   72  ansible-playbook -e "maquinas=all" ivy.yml
+   73  systemctl status nginx.service
+   74  cp ivy.yml desafiador.yml
+   75  vi desafiador.yml 
+   76  vi ivy.yml 
+   77  vi desafiador.yml 
+   78  vi ivy.yml 
+   79  vi desafiador.yml 
+   80  vi ivy.yml 
+   81  vi desafiador.yml 
+   82  ansible-playbook -e "maquinas=all" ivy.yml
+   83  ansible-playbook -e "maquinas=all" desafiador.yml 
+   84  vi desafiador.yml 
+   85  vi ivy.yml 
+   86  vi desafiador.yml 
+   87  vi ivy.yml 
+   88  vi desafiador.yml 
+   89  vi ivy.yml 
+   90  vi desafiador.yml 
+   91  ansible-playbook -e "maquinas=all" desafiador.yml 
+   92  vi desafiador.yml 
+   93  ansible-playbook -e "maquinas=all" desafiador.yml 
+   94  systemctl status nginx.service
+   95  vi desafiador.yml 
+   96  systemctl status nginx.service
+   97  vi desafiador.yml 
+   98  ansible-playbook -e "maquinas=all" desafiador.yml 
+   99  vi desafiador.yml 
+  100  ansible-playbook -e "maquinas=all" desafiador.yml 
+  101  systemctl status nginx.service
+  102  cat /var/www/html/index.
+  103  cat /var/www/html/index.php 
+  104  vi desafiador.yml 
+  105  cd ../roles/
+  106  ansible-galaxy init asa_noturna
+  107  ls
+  108  cd asa_noturna/
+  109  vi README.md 
+  110  cd meta/
+  111  ls
+  112  vi main.yml 
+  113  cd ..
+  114  cd test
+  115  cd tests/
+  116  ls
+  117  vi test.yml 
+  118  cd ..
+  119  cd tasks/
+  120  > prerequisitos.yml
+  121  > iniciando_banco.yml
+  122  > prov_database.yml
+  123  > deploy_appweb.yml
+  124  ls
+  125  vi prerequisitos.yml 
+  126  vi iniciando_banco.yml 
+  127  vi prov_database.yml 
+  128  vi deploy_appweb.yml 
+  129  cd ../templates/
+  130  vi index.html
+  131  cd ../vars/
+  132  ls -lhtr
+  133  vi main.yml 
+  134  cd ../tasks/
+  135  vi main.yml 
+  136  cd ..
+  137  cp roles/asa_noturna/tests/test.yml playbooks/
+  138  cd playbooks/
+  139  ls -lhtr]
+  140  ls -lhtr
+  141  mv {test,batman}.yml 
+  142  ls
+  143  ls -lhtr
+  144  vi batman.yml 
+  145  ansible-playbook batman.yml 
+  146  cd /etc/ansible/
+  147  ls
+  148  ls -lhtr
+  149  cd playbooks/
+  150  ls -lhtr
+  151  vi desafiador.yml 
+  152  vi batman.yml 
+  153  cd ro
+  154  cd ../roles/
+  155  ls
+  156  cd asa_noturna/
+  157  ls
+  158  cd ..
+  159  history
+  160  ansible-galaxy init puppet
+  161  cd roles/
+  162  ls
+  163  cd ..
+  164  ls -lhtr
+  165  cd roles/
+  166  ls
+  167  ansible-galaxy --help
+  168  ansible-galaxy -
+  169  ansible-galaxy -h
+  170  ansible-galaxy remove --help
+  171  ls
+  172  cd ..
+  173  ansible-galaxy remove puppet
+  174  ls
+  175  ansible-galaxy delete puppet
+  176  ansible-galaxy -h
+  177  ansible-galaxy list -h
+  178  ansible-galaxy list
+  179  rm -rf puppet/
+  180  cd roles/
+  181  ansible-galaxy init puppet
+  182  ls
+  183  ansible-galaxy list
+  184  cd puppet/
+  185  ls
+  186  ls -lhtr
+  187  cd tasks/
+  188  ls
+  189  > prerequisitos.yml
+  190  > install_ubuntu.yml
+  191  > install_centos.yml
+  192  ls -lhtr
+  193  vi main.yml 
+  194  vi prerequisitos.yml 
+  195  ls -lhtr
+  196  vi install_centos.yml 
+  197  vi install_ubuntu.yml 
+  198  vi prerequisitos.yml 
+  199  vi install_centos.yml 
+  200  vi prerequisitos.yml 
+  201  vi install_ubuntu.yml 
+  202  ls -lhtr
+  203  vi main.yml 
+  204  vi install_centos.yml 
+  205  vi install_ubuntu.yml 
+  206  cd ..
+  207  ls -lhtr
+  208  cd playbooks/
+  209  ls
+  210  cp batman.yml puppet.yml
+  211  vi puppet.yml 
+  212  history|less
+  213  ansible-playbook puppet
+  214  ansible-playbook puppet.yml 
+  215  rpm -qa|puppet
+  216  dpkg -l|puppet
+  217  dpkg -l| grep puppet
+  218  ls
+  219  cd ..
+  220  cd roles/
+  221  ls
+  222  cd puppet/tasks/
+  223  ls
+  224  ls -lhtr
+  225  vi install_centos.yml 
+  226  vi install_ubuntu.yml 
+  227  vi prerequisitos.yml 
+  228  cd ..
+  229  cd ../playbooks/
+  230  cat puppet.yml 
+  231  ansible-playbook puppet.yml 
+  232  vi desafiador.yml 
+  233  cd ../roles/puppet/tasks/
+  234  ls
+  235  ls -lhtr
+  236  vi install_centos.yml 
+  237  vi install_ubuntu.yml 
+  238  vi prerequisitos.yml 
+  239  vi install_centos.yml 
+  240  vi install_ubuntu.yml 
+  241  cd ..
+  242  ls -lhtr
+  243  vi hosts 
+  244  cd playbooks/
+  245  vi puppet.yml 
+  246  ansible-playbook puppet.yml 
+  247  cd ../roles/puppet/tasks/
+  248  vi prerequisitos.yml 
+  249  vi install_centos.yml 
+  250  vi install_ubuntu.yml 
+  251  cd /etc/ansible/roles/
+  252  ls
+  253  cd asa_noturna/
+  254  ls
+  255  cd tasks/
+  256  ls -lhjtr
+  257  ls -lhtr
+  258  vi main.yml 
+  259  ls -lhtr
+  260  vi prerequisitos.yml 
+  261  cd /etc/ansible/playbooks/
+  262  ls
+  263  vi ivy.yml 
+  264  cd ../roles/asa_noturna/tasks/
+  265  vi prerequisitos.yml 
+  266  ls -lhtr
+  267  vi deploy_appweb.yml 
+  268  ls -lhtr
+  269  vi prov_database.yml 
+  270  vi deploy_appweb.yml 
+  271  vi iniciando_banco.yml 
+  272  vi prerequisitos.yml 
+  273  ls -lhtr
+  274  cd ..
+  275  ls -lhtr
+  276  cd files/
+  277  ls
+  278  cd ..
+  279  cd defaults/
+  280  ls
+  281  vi main.yml 
+  282  cd ..
+  283  ls
+  284  ls l-htr
+  285  ls -lhtr
+  286  cd handlers/
+  287  ls
+  288  cat main.yml 
+  289  cd ..
+  290  ls -lhtr
+  291  ls  meta/
+  292  ls tests/
+  293  cd t
+  294  cd tests/
+  295  ls
+  296  cat inventory 
+  297  cd ..
+  298  ls
+  299  ls -lhtr
+  300  cd templates/
+  301  ls
+  302  cd ..
+  303  ls
+  304  ls -lhtr
+  305  cd vars/
+  306  ls
+  307  cat main.yml 
+  308  cd ..
+  309  cls
+  310  ls -lhtr
+  311  cd defaults/
+  312  ls
+  313  cat main.yml 
+  314  cd /etc/ansible/playbooks/
+  315  ls
+  316  vi desafiador.yml 
+  317  cd /etc/ansible/
+  318  puppet --version
+  319  cat /etc/resolv.conf 
+  320  cdd
+  321  cd
+  322  puppet resource package ccze
+  323  puppet resource package httpd
+  324  puppet resource package apache
+  325  puppet resource package ccze ensure=present
+  326  puppet resource package ccze ensure=absent
+  327  puppet resource service apache2
+  328  puppet resource service apache2 ensure=started
+  329  puppet resource service apache2 ensure=running
+  330  puppet resource service nginx
+  331  puppet resource service nginx ensure=stopped enable=false
+  332  puppet resource service apache2 ensure=running
+  333  puppet resource user gaviao_negro
+  334  puppet resource user root
+  335  puppet resource user gaviao_negro ensure=present shell=/bin/bash managehome=true
+  336  puppet resource user gaviao_negro
+  337  facter
+  338  facter networking
+  339  facter networking.address
+  340  facter networking.hostname
+  341  puppet resource package puppetserver ensure=present
+  342  free -h
+  343  vi /etc/default/puppetserver 
+  344  puppet resource service puppetserver ensure=present enable=true
+  345  puppet resource service puppetserver ensure=running enable=true
+  346  systemctl status puppetserver
+  347  top
+  348  ss -lntp
+  349  puppet describe 
+  350  puppet describe --list
+  351  puppet describe package
+  352  d
+  353  cd
+  354  vi mulher_gaviao.pp
+  355  puppet apply mulher_gaviao.pp
+  356  vi mulher_gaviao.pp
+  357  puppet apply mulher_gaviao.pp
+  358  cat /tmp/memfree 
+  359  vi mulher_gaviao.pp
+  360  puppet apply mulher_gaviao.pp
+  361  ls -l
+  362  htop
+  363  ls -l
+  364  vi mulher_gaviao.pp
+  365  puppet apply mulher_gaviao.pp
+  366  cat mulher_gaviao.pp 
+  367  cat /tmp/memfree 
+  368  ls /etc/puppetlabs/
+  369  cd /etc/puppetlabs/puppet
+  370  ls
+  371  vi puppet.conf 
+  372  vi a
+  373  cd
+  374  puppet config set dns_alt_names devops --section master
+  375  cd /etc/puppetlabs/puppet
+  376  vi puppet.conf 
+  377  cd ..
+  378  puppetserver ca list
+  379  vi /etc/hosts
+  380  puppetserver ca list
+  381  puppetserver ca list -a
+  382  puppetserver ca list
+  383  puppetserver ca sign --certname docker.salas4linux.com.br
+  384  puppetserver ca list
+  385  puppetserver ca list -a
+  386  puppetserver ca list
+  387  puppetserver ca sign --certname automation.salas4linux.com.br
+  388  puppetserver ca list
+  389  puppetserver ca list -a
+  390  systemctl status puppet-agent
+  391  ss -lntp
+  392  systemctl status puppetserver
+  393  puppetserver ca list -a
+  394  cd /etc/puppetlabs/code
+  395  ls -lhtr
+  396  sl
+  397  ls
+  398  ls -lhtr
+  399  cd environments/
+  400  ls
+  401  cd production/
+  402  ls
+  403  cd ..
+  404  ls
+  405  puppet resource package pdk ensure=present
+  406  cd modules/
+  407  ls
+  408  pdk new module oliver
+  409  ls
+  410  ls -lhtr oliver/
+  411  cd oliver/templates/
+  412  ls -lh
+  413  ls
+  414  vi puppet.conf.erb
+  415  cd ../manifests/
+  416  vi init.pp
+  417  ls
+  418  cd /etc/puppetlabs/code/environments/
+  419  ls
+  420  cp -r production/ containers
+  421  ls
+  422  cd -
+  423  cd production/
+  424  ls
+  425  cd manifests/
+  426  ls
+  427  vi arqueiro.pp
+  428  puppet agent -t --server devops.salas4linux.com.br
+  429  puppet agent -t
+  430  cd
+  431  tail -f /var/log/syslog 
+  432  cd /etc/puppetlabs/code/environments/
+  433  ls
+  434  cd /etc/puppetlabs/code/
+  435  ls
+  436  cd modules/
+  437  ls
+  438  cd oliver/
+  439  ls
+  440  cd ..
+  441  ls
+  442  cd modules/
+  443  ls
+  444  cd ..
+  445  ls
+  446  cd environments/
+  447  ls
+  448  cd ..c
+  449  cd ..
+  450  ls
+  451  cd p
+  452  cd puppet
+  453  ls
+  454  vi puppet.conf 
+  455  cd /etc/puppetlabs/puppetserver/
+  456  ls
+  457  cd ..
+  458  ls
+  459  ls -lhtr
+  460  cd code/
+  461  ls
+  462  cd environments/
+  463  ls
+  464  cd production/
+  465  ls
+  466  cd m
+  467  cd ..
+  468  ls
+  469  cd modules/
+  470  ls
+  471  cd /etc/puppetlabs/puppet
+  472  vi puppet.conf 
+  473  vi puppet.conf ; watch -n0 cat puppet.conf 
+  474  cd /etc/puppetlabs/code/modules/
+  475  ls
+  476  cd oliver/
+  477  ls
+  478  ls -lhtr
+  479  cd ..
+  480  pdk new module --skip-interview speedy
+  481  cd speedy/
+  482  ls
+  483  ls -lhtr
+  484  cd files/
+  485  ls
+  486  cp ~/.bashrc ./bashrc
+  487  ls
+  488  > bashrc_logout
+  489  ls
+  490  vi bashrc
+  491  bi bashrc_logout 
+  492  vi bashrc_logout 
+  493  cd ../manifests/
+  494  vi init.pp
+  495  puppet parse validate init.pp
+  496  puppet parser validate init.pp
+  497  cd ../../../../
+  498  ls
+  499  cd code/environments/
+  500  vi production/manifests/arqueiro.pp 
+  501  cd containers/manifests/
+  502  ls
+  503  vi canario.pp
+  504  tail -50f /var/log/syslog 
+  505  ls -lart
+  506  vi .bashrc_logout 
+  507  cd /etc/puppetlabs/code/modules/speedy/manifests/
+  508  vi init.pp 
+  509  vi .bashrc
+  510  vi .bash_logout 
+  511  cowsay -f www
+  512  cowsay -f www batata
+  513  cowsay -f ren batata
+  514  cowsay -f duck a
+  515  cowsay -f cheese a
+  516  cowsay -f bunny a
+  517  cowsay -f cock a
+  518  cd /etc/puppetlabs/code/environments/containers/
+  519  ls
+  520  cd modules/
+  521  ls
+  522  pdk new module --skip-interview nginx
+  523  ls
+  524  cd nginx/manifests/
+  525  > del_apache.pp
+  526  > install_nginx.pp
+  527  > init.pp
+  528  vi del_apache.pp 
+  529  vi install_nginx.pp 
+  530  vi init.pp 
+  531  cd ../../../
+  532  vi manifests/canario.pp 
+  533  cd /etc/puppetlabs/code/environments/containers/
+  534  ls
+  535  cd m
+  536  cd modules/
+  537  ls
+  538  pdk new module --skip-interview docker
+  539  ls /etc/puppetlabs/code/modules/oliver/manifests/
+  540  cat /etc/puppetlabs/code/modules/oliver/manifests/
+  541  cat /etc/puppetlabs/code/modules/oliver/manifests/init.pp 
+  542  cp /etc/puppetlabs/code/modules/oliver/manifests/init.pp .
+  543  ls -lhtr
+  544  mv init.pp docker/manifests/
+  545  cd docker/manifests/
+  546  ls -lhtr
+  547  vi init.pp 
+  548  ls -lhtr /etc/puppetlabs/code/modules/speedy/manifests/
+  549  cat /etc/puppetlabs/code/modules/speedy/manifests/init.pp 
+  550  cp /etc/puppetlabs/code/modules/speedy/manifests/init.pp .
+  551  ls -lhtr
+  552  vi init.pp 
+  553  history|less
+  554  puppet parser validate init.pp 
+  555  vi init.pp 
+  556  puppet parser validate init.pp 
+  557  vi init.pp 
+  558  puppet parser validate init.pp 
+  559  exit
+  560  cd /etc/puppetlabs/
+  561  ls
+  562  cd code/environments/containers/m
+  563  cd code/environments/containers/manifests/
+  564  ls
+  565  vi canario.pp 
+  566  ls
+  567  cd ..
+  568  ls
+  569  cd modules/
+  570  ls
+  571  cd nginx/
+  572  ls
+  573  cd manifests/
+  574  ls
+  575  vi install_nginx.pp 
+  576  ls -lhtr
+  577  vi del_apache.pp 
+  578  cd /etc/puppetlabs/code
+  579  ls
+  580  cd modules/
+  581  ls
+  582  cd oliver/
+  583  ls
+  584  cd manifests/
+  585  ls
+  586  vi init.pp 
+  587  cd ..
+  588  ls
+  589  cd speedy/manifests/
+  590  ls
+  591  vi init.pp 
+  592  cd /etc/puppetlabs/code/modules/oliver/manifests/
+  593  ls
+  594  vi init.pp 
+  595  cd /etc/puppetlabs/code/environments/containers/modules/docker/manifests/
+  596  vi init.pp
+  597  cd /etc/puppetlabs/code/environments/containers/m
+  598  cd /etc/puppetlabs/code/environments/containers/manifests/
+  599  ls -lhtr
+  600  vi canario.pp 
+  601  cd ..
+  602  ls
+  603  cd containers/
+  604  ls
+  605  cd modules/
+  606  ls
+  607  cd docker/
+  608  ls
+  609  cd manifests/
+  610  ls
+  611  vi init.pp 
+  612  history
+  613  puppet parser validate init.pp 
+  614  vi init.pp 
+  615  puppet parser validate init.pp 
+  616  vi init.pp 
+  617  puppet parser validate init.pp 
+  618  cd /etc/puppetlabs/code/environments/
+  619  ls
+  620  cd containers/
+  621  ls
+  622  cd manifests/
+  623  ls
+  624  vi canario.pp 
+  625  ss -lntp
+  626  vi /etc/puppetlabs/code/environments/containers/manifests/canario.pp
+  627  cd ../
+  628  ls
+  629  cd modules/
+  630  ls
+  631  cd ..
+  632  manifest 
+  633  ls
+  634  cd manifests/
+  635  vi canario.pp 
+  636  ls
+  637  cd ..
+  638  ls
+  639  cd manifests/
+  640  cd ..
+  641  ls
+  642  cd modules/
+  643  ls
+  644  cd ..
+  645  ls
+  646  cd production/
+  647  ls
+  648  cd manifests/
+  649  ls
+  650  vi arqueiro.pp 
+  651  cd ..
+  652  ls
+  653  cd ..
+  654  ls
+  655  cd modules/
+  656  ls
+  657  cd oliver/
+  658  ls
+  659  cd manifests/
+  660  ls
+  661  vi init.pp 
+  662  cd ..
+  663  ls
+  664  cd environments/
+  665  ls
+  666  cd production/
+  667  ls
+  668  cd manifests/
+  669  ls
+  670  vi arqueiro.pp 
+  671  cd mo
+  672  cd modu
+  673  cd ../modules/
+  674  ls
+  675  cd ..
+  676  ls
+  677  cd containers/
+  678  ls
+  679  cd modules/
+  680  ls
+  681  cd ..
+  682  cd manifests/
+  683  ls
+  684  vi canario.pp 
+  685  vi /etc/puppetlabs/code/environments/containers/modules/docker/manifests/init.pp
+  686  vi canario.pp 
+  687  vi /etc/puppetlabs/code/environments/containers/modules/docker/manifests/init.pp
+  688  cd /etc/puppetlabs/code/environments/containers/modules/docker/manifests/
+  689  ls
+  690  cp init.pp init.pp.BKP
+  691  vi init.pp
+  692  cd /etc/puppetlabs/code/
+  693  ls
+  694  cd modules/
+  695  ls
+  696  cd ..
+  697  cd environments/
+  698  ls
+  699  cd production/
+  700  ls
+  701  cd manifests/
+  702  ls
+  703  vi arqueiro.pp 
+  704  cd /etc/puppetlabs/code/environments/containers/manifests/
+  705  ls
+  706  vi canario.pp 
+  707  cd /etc/puppetlabs/code/environments/containers/modules/docker/manifests/
+  708  ls -lhtr
+  709  vi init.pp
+  710  vi init.pp.BKP 
+  711  vi init.pp.LAB
+  712  puppet parser validate init.pp.LAB
+  713  vi init.pp.LAB
+  714  vi init.pp
+  715  mv init.pp.MYCODE
+  716  mv init.pp init.pp.MYCODE
+  717  mv init.pp.LAB init.pp
+  718  vi init.pp
+  719  ls -lhtr
+  720  vi init.pp
+  721  puppet parser validate init.pp.LAB
+  722  puppet parser validate init.pp
+  723  vi init.pp
+  724  vi init.pp.MYCODE 
+  725  vi init.pp
+  726  vi init.pp.MYCODE 
+  727  vi init.pp
+  728  vi init.pp.MYCODE 
+  729  puppet parser validate init.pp.MYCODE
+  730  vi init.pp
+  731  mv init.pp init.pp.LAB
+  732  mv init.pp.MYCODE init.pp
+  733  ls -lhtr
+  734  vi init.pp
+  735  vi init.pp.LAB 
+  736  mv init.pp init.pp.MYCODE
+  737  mv init.pp.LAB init.pp
+  738  vi init.pp
+  739  cd /etc/ansible/playbooks/
+  740  ls
+  741  vi rundeck.yml
+  742  ansible-playbook --syntaxcheck rundeck.yml 
+  743  ansible-playbook --syntax_check rundeck.yml 
+  744  ansible-playbook --syntax-check rundeck.yml 
+  745  vi rundeck.yml
+  746  ansible-playbook --syntax-check rundeck.yml 
+  747  ls
+  748  vi puppet.yml 
+  749  vi rundeck.yml
+  750  ls -lhtr
+  751  vi batman.yml 
+  752  vi desafiador.yml 
+  753  vi rundeck.yml
+  754  ansible-playbook --syntax-check rundeck.yml 
+  755  vi rundeck.yml
+  756  ansible-playbook --syntax-check rundeck.yml 
+  757  ansible-playbook rundeck.yml 
+  758  cd /etc/puppetlabs/code/modules/
+  759  ls
+  760  cd speedy/files/
+  761  ls
+  762  vim bashrc
+  763  puppet agent -t
+  764  systemctl puppet status
+  765  systemctl status puppet
+  766  ps -ef|grep -i puppet
+  767  systemctl stop puppetserver
+  768  mkdir cara_de_barro
+  769  git --version
+  770  cd cara_de_barro/
+  771  ls
+  772  git init
+  773  ls -la
+  774  ls .git/
+  775  cd .git/
+  776  ls -lart
+  777  vi HEAD 
+  778  vi description 
+  779  ls hooks/
+  780  cd ..
+  781  git config user.name "Gabriel Claudino"
+  782  ls -lt
+  783  cat .git/config 
+  784  git config user.email "gabriel.claudino@gmail.com"
+  785  cat .git/gitconfig 
+  786  cat .git/config 
+  787  git config --global user.email "gabriel.claudino@gmail.com"
+  788  git config --global core.editor "vim"
+  789  git config -l
+  790  vim README.md
+  791  cat README.md 
+  792  git status
+  793  git add README.md 
+  794  git status
+  795  git commit -m "Criando o arquivo README.md"
+  796  git status
+  797  git log
+  798  git tag v1.0 2bb8ea2eb980d5a805e07eab11d4318279bcbcc9
+  799  git log
+  800  vi donna_troy.sh
+  801  git add
+  802  git add donna_troy.sh 
+  803  git status
+  804  git commit
+  805  git commit -m "Script do Cowsay!"
+  806  git status
+  807  git log
+  808  git tag v1.0.0 eb8f585342879444ecedfaf9ad5de6da62bcb432
+  809  git log
+  810  bash donna_troy.sh 
+  811  vim donna_troy.sh 
+  812  git add donna_troy.sh 
+  813  git commit -m "Mudança qualquer"
+  814  git log
+  815  git log --oneline
+  816  git revert 50283a8
+  817  git log --oneline
+  818  cat donna_troy.sh 
+  819  git remote add batman https://github.com/Gabriel-Claudino/caradebarro.git
+  820  git remote -v
+  821  git push batman master
+  822  head README.md 
+  823  git pull batman master
+  824  head README.md 
+  825  ls -lhtr
+  826  history
+  827  cd ..
+  828  mkdir infra_agil
+  829  cd infra_agil/
+  830  history
+  831  git init
+  832  cp -r /etc/ansible/ .
+  833  ls
+  834  cd ansible/
+  835  ls
+  836  cd playbooks/
+  837  ls
+  838  cd ..
+  839  cp -r /etc/puppetlabs/ .
+  840  ls
+  841  git status
+  842  git add ansible/
+  843  git add puppetlabs/
+  844  git status
+  845  git commit -m "Arquivos curso Infra Agil-4linux"
+  846  git log
+  847  git tag v1 7d24bea5edb10daa77305ebd780bc5fcc387d94e
+  848  history
+  849  git remote add infra_agil https://github.com/Gabriel-Claudino/infra_agil.git
+  850  git push -u infra_agil master
+  851  history
+  852  git remote -v
+  853  git push infra_agil master
+  854  scp -r docker:~/dockerfile .
+  855  ls
+  856  cd dockerfile/
+  857  ls
+  858  cd ..
+  859  ls
+  860  git push infra_agil master
+  861  git status
+  862  git add dockerfile/ ""
+  863  git add dockerfile/ " "
+  864  history
+  865  git add dockerfile/
+  866  git commit -m ""
+  867  git commit -m " "
+  868  git commit -m "_"
+  869  git log
+  870  git tag v2 750352b7311d8500df4d025caf2101da04059ef7
+  871  git push infra_agil master
+  872  history > history_devops.txt
