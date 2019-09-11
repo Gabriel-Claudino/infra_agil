@@ -1,0 +1,5 @@
+---
+# tasks file for puppet
+- include: prerequisitos.yml
+- include: install_ubuntu.yml
+- include: install_centos.yml

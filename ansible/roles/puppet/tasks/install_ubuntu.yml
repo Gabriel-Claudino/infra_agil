@@ -1,0 +1,11 @@
+- name: Instalando Pacote RPM - Puppet - UBUNTU
+  apt:
+    deb: /tmp/puppet6-release-bionic.deb
+  when: ansible_os_family == "Debian"
+
+- name: Instalando Pacote - puppet-agent - UBUNTU
+  apt:
+    name: puppet-agent
+    update_cache: yes
+    state: present
+  when: ansible_os_family == "Debian"

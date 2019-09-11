@@ -1,0 +1,12 @@
+- name: Instalando Pacote RPM - Puppet - CENTOS
+  yum: 
+    name: /tmp/puppet6-release-el-7.noarch.rpm
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Instalando Pacote - puppet-agent - CENTOS
+  yum:
+    name: puppet-agent
+    state: present
+  when: ansible_os_family == "RedHat"
+

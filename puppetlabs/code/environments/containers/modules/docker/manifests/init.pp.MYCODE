@@ -1,0 +1,43 @@
+class docker{
+	case $osfamily{
+		"debian":{
+			exec{"atualiza_repo":
+				command => "/usr/bin/apt update"
+			}
+			$pacotes = ['apt-transport-https','ca-certificates','curl','gnupg-agent','software-properties-common']
+		}
+	}
+	
+	package{$pacotes:
+		ensure => present,
+		before => Exec['debian_key']
+	}
+	
+	exec{'debian_key':
+		command => "/usr/bin/curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -",
+		before => Exec['debian_repository']
+	}
+
+	exec{'debian_repository': 
+                command => '/usr/bin/add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"',
+		before => Exec['atualiza_docker_repo']
+        }
+
+        exec{"atualiza_docker_repo":
+		command => "/usr/bin/apt update",
+		before => Package['docker-ce']
+        }
+	
+	package{'docker-ce':
+                name => 'docker-ce',
+                ensure => present,
+		before => Service['docker']
+	}
+
+	service{'docker':
+                ensure => running,
+                enable => true,
+                subscribe => Package['docker-ce']
+        }
+
+}

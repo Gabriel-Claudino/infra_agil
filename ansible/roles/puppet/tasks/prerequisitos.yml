@@ -1,0 +1,11 @@
+- name: Baixando Repositorio Puppet - CENTOS
+  get_url:
+    url: https://yum.puppet.com/puppet6-release-el-7.noarch.rpm
+    dest: /tmp/
+  when: ansible_os_family == "RedHat"
+
+- name: Baixando Repositorio Puppet - UBUNTU
+  get_url:
+    url: https://apt.puppet.com/puppet6-release-bionic.deb
+    dest: /tmp/
+  when: ansible_os_family == "Debian"
