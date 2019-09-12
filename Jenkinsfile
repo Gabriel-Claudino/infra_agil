@@ -28,7 +28,7 @@ pipeline {
 					fi'''
 			}
 		}
-		stage('Deploy) {
+		stage('Deploy') {
 			steps {
 				sh 'rpm -qa | grep httpd || sudo yum install httpd -y'
 				sh 'sudo httpd -k restart'
